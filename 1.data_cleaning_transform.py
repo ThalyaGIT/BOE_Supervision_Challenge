@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # convert first excel into dataframe
 general_df = pd.read_excel('raw_dataset.xlsx', sheet_name=0)
@@ -47,6 +48,9 @@ df = pd.pivot_table(df, values = 'Value', index=['Firm Name','Year End'], column
 # Remove index column name
 df = df.rename_axis(None, axis=1)
 
+# Replace all zeros with NaN given that is unlikely a zero is the real value of those metrics
+df.replace(0, np.nan, inplace=True)
+
 # Save dataframe as CSV
 df.to_csv('clean_dataset.csv', encoding='utf-8', index=False)
-print(df.columns)
+print(df)
