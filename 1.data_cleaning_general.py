@@ -5,9 +5,6 @@ general_df = pd.read_excel('raw_dataset.xlsx', sheet_name=0)
 
 # The goal of this script is to format the general dataset into one that is more usable for data visualisaton in Tableau
 
-# Drop the first column
-general_df = general_df.drop(general_df.columns[0], axis=1)
-
 # Combine the Year End and Metric columns
 general_df.columns = general_df.columns + '_' + general_df.iloc[0]
 general_df = general_df.drop([0])

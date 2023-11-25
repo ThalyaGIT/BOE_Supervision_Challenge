@@ -5,9 +5,6 @@ underwritting_df = pd.read_excel('raw_dataset.xlsx', sheet_name=1)
 
 # The goal of this script is to format the underwritting dataset into one that is more usable for data visualisaton in Tableau
 
-# Drop the first column
-underwritting_df = underwritting_df.drop(underwritting_df.columns[0], axis=1)
-
 # Combine the Year End and Metric columns
 underwritting_df.columns = underwritting_df.columns + '_' + underwritting_df.iloc[0]
 underwritting_df = underwritting_df.drop([0])
