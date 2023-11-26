@@ -6,10 +6,7 @@ Data Journey
 5. Azure ML to manage Machine learning Jobs
 6. Connects up to Power BI for visualising and analysing database
 
-Deploymnet
-1. Data Scientist will make changes and push code to the git branch
-2. Use Azure devops to manage CI cd 
-3. Deploy code
+
 
 Considerations
 1. ADF user friendly since drag and drop, can't modify with code but doubt there will be much code changes needed since the Form unlikely to keep changing
