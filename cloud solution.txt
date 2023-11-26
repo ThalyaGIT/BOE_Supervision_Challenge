@@ -1,0 +1,26 @@
+Data Journey
+1. Insurers send forms and they get dropped into blob storage
+2. Data factory ingest the files and they are scheduled. Raw form is stored in Azure SQL database
+3. Once it is in SQL database, databricks is used for further ETL to create tables that are useful
+4. Relational database and ready for machine learning or visualisation
+5. Azure ML to manage Machine learning Jobs
+6. Connects up to Power BI for visualising and analysing database
+
+Deploymnet
+1. Data Scientist will make changes and push code to the git branch
+2. Use Azure devops to manage CI cd 
+3. Deploy code
+
+Considerations
+1. ADF user friendly since drag and drop, can't modify with code but doubt there will be much code changes needed since the Form unlikely to keep changing
+2. Databricks for other ETL, more flexible and supports coding languages (Data engineering layer)
+3. ML studio acts as the Machine Learning layer
+3. SQL Database using SQL query language which is widely used
+
+Complexity
+1. Web UI can be possible for dropping forms and also viewing ML results and Power BI dashboards
+2. VM for each data scientist to develop in consistent environments 
+3. Several environments, testing and developing, shutting down environments when not in Use
+4. Dynamic Scaling for Azure SQL database 
+5. Security
+6. Other services like analysis service 
