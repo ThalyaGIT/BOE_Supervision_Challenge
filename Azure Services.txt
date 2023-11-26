@@ -1,8 +1,0 @@
-1. Store it in SQL database in Azure
-2. Azure Data factory to ETL data and store it back into SQL
-3. Layer of clean data
-4. Relationional database system to speed up processing
-5. Machine Learning Studio
-6. Power BI for sharing insights
-7. Azure DevOps Services:
-End Goal: Save it in the format onto database that I showed
